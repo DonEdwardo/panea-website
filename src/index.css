@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFF7F8;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    color: #3A2820;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  #root { width: 100%; overflow-x: hidden; }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+}
+
+@layer utilities {
+  /* Rose-pink gradient text */
+  .text-gradient-rose {
+    background: linear-gradient(135deg, #E0899C 0%, #C4859A 50%, #A36578 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Warm brand gradient */
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #C4956A 0%, #C4859A 50%, #E0899C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-animated-blush {
+    background: linear-gradient(160deg, #FFF7F8 0%, #FAD5DE 25%, #FFF0F4 55%, #FFEEF2 100%);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+  }
+
+  .card-tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
